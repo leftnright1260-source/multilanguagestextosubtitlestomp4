@@ -1,6 +1,7 @@
 import sys
 import time
 import textwrap
+import webbrowser
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 import threading
@@ -9,7 +10,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-# --- Configuración por Grupos Lingüísticos --
+# --- Configuración por Grupos Lingüísticos ---
 CONFIG_IDIOMAS = {
     "CJK": {"fuente": "msyh.ttc", "size": 32, "width": 18, "idiomas": ["Chinese", "Japanese", "Korean"]},
     "RTL": {"fuente": "segoeui.ttf", "size": 32, "width": 38, "idiomas": ["Arabic", "Persian", "Urdu", "Pastún", "Hebreo"]},
@@ -65,6 +66,9 @@ class SimuladorSubtitulos:
         self.font_family = "segoeui.ttf"
         self.font_size = 28
         self.ancho_linea = 45
+
+        # Integración Menú Superior
+        self.crear_menu_superior()
 
         # Ventana Externa de Proyección
         self.ventana_proyeccion = tk.Toplevel(self.root)
@@ -166,6 +170,75 @@ class SimuladorSubtitulos:
         self.btn_exportar.pack(fill="x", ipady=4)
 
         self.al_cambiar_idioma()
+
+    def crear_menu_superior(self):
+        barra_menu = tk.Menu(self.root)
+        menu_ayuda = tk.Menu(barra_menu, tearoff=0)
+        menu_ayuda.add_command(label="Acerca de / Créditos", command=self.mostrar_acerca_de)
+        barra_menu.add_cascade(label="Ayuda", menu=menu_ayuda)
+        self.root.config(menu=barra_menu)
+
+    def mostrar_acerca_de(self):
+        ventana_about = tk.Toplevel(self.root)
+        ventana_about.title("Acerca de - Subtítulos Pro")
+        ventana_about.geometry("380x250")
+        ventana_about.resizable(False, False)
+        ventana_about.configure(bg="#1a202c")
+        
+        # Centrar la ventana respecto a la principal
+        ventana_about.transient(self.root)
+        ventana_about.grab_set()
+
+        tk.Label(
+            ventana_about, 
+            text="Subtítulos Pro Generator", 
+            font=("Segoe UI", 14, "bold"), 
+            fg="#ffffff", 
+            bg="#1a202c"
+        ).pack(pady=(20, 5))
+
+        tk.Label(
+            ventana_about, 
+            text="Desarrollado por José Galindo", 
+            font=("Segoe UI", 11, "bold"), 
+            fg="#319795", 
+            bg="#1a202c"
+        ).pack(pady=2)
+
+        tk.Label(
+            ventana_about, 
+            text="Herramienta Pro de Automatización de Contenido", 
+            font=("Segoe UI", 9, "italic"), 
+            fg="#a0aec0", 
+            bg="#1a202c"
+        ).pack(pady=(0, 15))
+
+        def abrir_website():
+            webbrowser.open("https://gabriels.work")
+
+        btn_web = tk.Button(
+            ventana_about, 
+            text="🌐 Visitar GABRIELS.WORK", 
+            font=("Segoe UI", 10, "bold"), 
+            bg="#319795", 
+            fg="white", 
+            activebackground="#2b6cb0", 
+            activeforeground="white",
+            relief="flat", 
+            padx=12, 
+            pady=6, 
+            command=abrir_website, 
+            cursor="hand2"
+        )
+        btn_web.pack(pady=10)
+
+        tk.Label(
+            ventana_about, 
+            text="© All rights reserved", 
+            font=("Segoe UI", 8), 
+            fg="#718096", 
+            bg="#1a202c"
+        ).pack(side="bottom", pady=10)
 
     def al_cambiar_idioma(self, event=None):
         idioma = self.combo_idioma.get()
