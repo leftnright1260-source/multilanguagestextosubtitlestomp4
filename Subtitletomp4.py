@@ -9,7 +9,7 @@ import cv2
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
 
-# --- Configuración por Grupos Lingüísticos ---
+# --- Configuración por Grupos Lingüísticos --
 CONFIG_IDIOMAS = {
     "CJK": {"fuente": "msyh.ttc", "size": 32, "width": 18, "idiomas": ["Chinese", "Japanese", "Korean"]},
     "RTL": {"fuente": "segoeui.ttf", "size": 32, "width": 38, "idiomas": ["Arabic", "Persian", "Urdu", "Pastún", "Hebreo"]},
