@@ -34,3 +34,11 @@ pip install opencv-python numpy Pillow
 
 Run the main script:
 python main.py
+📄 Copyright & Credits
+© 2026 José Galindo. All rights reserved.
+
+Developed as a professional tool for subtitle automation and multi-language content creation.
+
+Developer: José Galindo
+
+Website: https://gabriels.work
