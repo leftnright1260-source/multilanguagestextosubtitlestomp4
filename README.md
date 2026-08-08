@@ -36,20 +36,20 @@ Ready for chroma-key editing in video editors such as Premiere Pro, CapCut, or D
 
 Supports a wide range of writing systems, including:
 
-Latin
-Cyrillic
-Chinese
-Japanese
-Korean
-Arabic
-Persian
-Urdu
-Bengali
-Hindi
-Thai
-Burmese
-Amharic
-Armenian
+Latin,
+Cyrillic,
+Chinese,
+Japanese,
+Korean,
+Arabic,
+Persian,
+Urdu,
+Bengali,
+Hindi,
+Thai,
+Burmese,
+Amharic,
+Armenian,
 Mongolian
 and more.
 
