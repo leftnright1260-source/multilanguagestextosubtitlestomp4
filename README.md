@@ -1,3 +1,4 @@
+
 🎬 Text-to-Subtitles MP4 Generator
 
 Create green-screen subtitle videos from plain text in 67 languages.
@@ -8,7 +9,9 @@ The reading pace is automatically calculated from the text and can be adjusted b
 
 Designed for YouTube Shorts, social media videos, video editing, and multilingual content creation.
 
+
 📥 Download for Windows
+
 ⬇️ Download Subtitletomp4 v1.0.0 — Windows 64-bit
 
 No Python installation required.
@@ -16,6 +19,7 @@ No Python installation required.
 Download the ZIP, extract it, and run the Windows executable included in the package.
 
 Tip: Do not download "Source code (zip)" if you simply want to use the application. Download the Windows executable ZIP above.
+
 
 📋 Overview
 
@@ -32,9 +36,11 @@ White text with a black shadow
 MP4 format
 Ready for chroma-key editing in video editors such as Premiere Pro, CapCut, or DaVinci Resolve.
 ✨ Key Features
+
 🌍 Multilingual Support — 67 Languages
 
 Supports a wide range of writing systems, including:
+
 
 Latin,
 Cyrillic,
@@ -55,11 +61,13 @@ and more.
 
 The application automatically selects typography settings according to the selected language.
 
+
 ⏱️ Adjustable Reading Pace — ±50%
 
 Use the built-in slider to make the subtitle sequence faster or slower by up to 50%.
 
 This makes it easier to synchronize the generated video with an existing voiceover.
+
 
 👁️ Live Preview
 
@@ -72,6 +80,7 @@ Pause
 Restart
 Timeline navigation
 Subtitle block navigation
+
 📝 Automatic Text Formatting
 
 The application:
@@ -81,6 +90,7 @@ Removes unnecessary blank lines.
 Formats the text.
 Wraps it into subtitle lines.
 Groups the lines into subtitle blocks.
+
 ⏸️ Punctuation-Based Timing
 
 Reading pauses are automatically calculated according to punctuation such as:
@@ -91,6 +101,7 @@ Question marks
 Exclamation marks
 Other supported punctuation
 Line breaks
+
 🎬 Local MP4 Rendering
 
 The video is rendered locally on your computer using OpenCV and Pillow.
@@ -115,12 +126,15 @@ Use the ±50% slider if you need to make the final video faster or slower.
 Use the live preview to check the subtitle animation.
 
 5. Export
+   
 
 Click:
+
 
 🎬 EXPORT TO MP4
 
 The application creates a Full HD MP4 ready for your video-editing workflow.
+
 
 💻 Running from Source
 
@@ -139,6 +153,7 @@ pip install opencv-python numpy Pillow
 Run:
 
 python Subtitletomp4.py
+
 📦 Windows Executable
 
 The Windows version is distributed as a ZIP package containing the compiled executable.
@@ -146,6 +161,7 @@ The Windows version is distributed as a ZIP package containing the compiled exec
 Python is not required when using the compiled Windows version.
 
 Download the latest version from the Releases section.
+
 
 👨‍💻 Credits
 
