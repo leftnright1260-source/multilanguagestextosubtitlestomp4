@@ -1,44 +1,158 @@
 🎬 Text-to-Subtitles MP4 Generator
-The idea is to create a green-screen MP4 from a text file in 60+ languages converted into subtitles, with a fixed reading pace adjustable by ±50%. Includes live preview and direct MP4 export—perfect for making subtitles for Shorts and videos!
+
+Create green-screen subtitle videos from plain text in 67 languages.
+
+Text-to-Subtitles MP4 Generator converts a .txt file into a 1920×1080 MP4 video with animated subtitle-style text on a green-screen background.
+
+The reading pace is automatically calculated from the text and can be adjusted by ±50% to match your voiceover or narration.
+
+Designed for YouTube Shorts, social media videos, video editing, and multilingual content creation.
+
+📥 Download for Windows
+⬇️ Download Subtitletomp4 v1.0.0 — Windows 64-bit
+
+No Python installation required.
+
+Download the ZIP, extract it, and run the Windows executable included in the package.
+
+Tip: Do not download "Source code (zip)" if you simply want to use the application. Download the Windows executable ZIP above.
 
 📋 Overview
-Text-to-Subtitles MP4 Generator is a Python desktop application with a simple user interface designed to automate subtitle video creation. Unlike traditional tools that require pre-recorded audio to sync text, this program automatically calculates the timeline and reading pace directly from a plain text file (.txt).
 
-It exports a high-quality 30 FPS MP4 video with a green chroma-key background (#126e47), ready to drop into Premiere Pro, CapCut, or DaVinci Resolve to key out the background in seconds.
+Text-to-Subtitles MP4 Generator is a Python desktop application designed to automate the creation of subtitle-style MP4 videos from plain text files.
 
+Instead of requiring pre-recorded audio to synchronize the text, the application calculates the subtitle timing directly from the text and its punctuation.
+
+The exported video is:
+
+1920 × 1080 Full HD
+30 FPS
+Green-screen background: #126e47
+White text with a black shadow
+MP4 format
+Ready for chroma-key editing in video editors such as Premiere Pro, CapCut, or DaVinci Resolve.
 ✨ Key Features
-Smart Multilingual Support (60+ Languages): Automatically handles Latin, Cyrillic, CJK, RTL/Arabic, Indic, and Amharic scripts with proper fonts and character limits.
+🌍 Multilingual Support — 67 Languages
 
-Dynamic Time-Stretching (±50% Range): Features a speed slider to speed up or slow down the overall reading pace by up to 50% in real time to match voiceovers.
+Supports a wide range of writing systems, including:
 
-Live Preview & Controls: Play, pause, reset, or scrub through subtitle blocks before exporting.
+Latin
+Cyrillic
+Chinese
+Japanese
+Korean
+Arabic
+Persian
+Urdu
+Bengali
+Hindi
+Thai
+Burmese
+Amharic
+Armenian
+Mongolian
+and more.
 
-Automatic Grammar-Based Pacing: Calculates natural reading pauses based on periods, commas, question marks, and line breaks.
+The application automatically selects typography settings according to the selected language.
 
-Direct Local MP4 Rendering: Generates HD videos locally using OpenCV and Pillow with high-contrast text shadows, without cloud fees or watermarks.
+⏱️ Adjustable Reading Pace — ±50%
+
+Use the built-in slider to make the subtitle sequence faster or slower by up to 50%.
+
+This makes it easier to synchronize the generated video with an existing voiceover.
+
+👁️ Live Preview
+
+Preview the subtitle animation before rendering the final video.
+
+Controls include:
+
+Play
+Pause
+Restart
+Timeline navigation
+Subtitle block navigation
+📝 Automatic Text Formatting
+
+The application:
+
+Reads the .txt file.
+Removes unnecessary blank lines.
+Formats the text.
+Wraps it into subtitle lines.
+Groups the lines into subtitle blocks.
+⏸️ Punctuation-Based Timing
+
+Reading pauses are automatically calculated according to punctuation such as:
+
+Periods
+Commas
+Question marks
+Exclamation marks
+Other supported punctuation
+Line breaks
+🎬 Local MP4 Rendering
+
+The video is rendered locally on your computer using OpenCV and Pillow.
+
+No cloud processing is required and no watermark is added by the application.
 
 🛠️ How It Works
-Select Language: Choose your target language to apply the correct typography rules.
+1. Select a language
 
-Load Text File: Import your .txt file; the app automatically formats and splits text into clean two-line subtitle blocks.
+Choose the language of your text from the language menu.
 
-Adjust Pace (Optional): Use the ±50% slider to calibrate the final duration.
+2. Load a TXT file
 
-Preview or Export: Test the live preview, then click export to render your .mp4 video.
+Select a plain-text .txt file containing your script.
 
-🚀 How to Run
-Make sure you have Python installed.
+3. Adjust the reading pace
+
+Use the ±50% slider if you need to make the final video faster or slower.
+
+4. Preview
+
+Use the live preview to check the subtitle animation.
+
+5. Export
+
+Click:
+
+🎬 EXPORT TO MP4
+
+The application creates a Full HD MP4 ready for your video-editing workflow.
+
+💻 Running from Source
+
+If you want to run the Python source code instead of the Windows executable:
+
+Requirements
+Python 3
+OpenCV
+NumPy
+Pillow
 
 Install the required libraries:
+
 pip install opencv-python numpy Pillow
 
-Run the main script:
-python main.py
-📄 Copyright & Credits
-© 2026 José Galindo. All rights reserved.
+Run:
 
-Developed as a professional tool for subtitle automation and multi-language content creation.
+python Subtitletomp4.py
+📦 Windows Executable
 
-Developer: José Galindo
+The Windows version is distributed as a ZIP package containing the compiled executable.
+
+Python is not required when using the compiled Windows version.
+
+Download the latest version from the Releases section.
+
+👨‍💻 Credits
+
+Developed by José Galindo
+
+GABRIELS.WORK
 
 Website: https://gabriels.work
+
+© 2026 José Galindo. All rights reserved.
